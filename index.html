@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Digitalbank landing page</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+
+  <style>
+    .dd {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dd-content {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      background-color: whitesmoke;
+      z-index: 9999;
+      color: gray;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      width: 220px;
+      max-height: 70vh;
+    }
+
+    .dd:focus-within>.dd-content,
+    .dd:hover>.dd-content {
+      display: block;
+    }
+
+    .dd-content a {
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .dd-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dd-content a:hover {
+      background-color: #e5f7ff;
+    }
+  </style>
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden">
+  <header class="z-30 shadow-xl shadow-gray-100 lg:p-5 lg:px-20 p-4 ">
+    <nav class="flex justify-between lg:items-center  ">
+
+      <img src="./images/logo-dark.svg" alt="Digitalbank" class="cursor-not-allowed">
+
+      <ul class="lg:flex hidden gap-7   text-neutral-500 text-sm">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Careers</a></li>
+      </ul>
+
+      <div class="">
+        <button class="rounded-full bg-green-400 lg:block hidden lg:mt-5  lg:px-4 lg:py-2  text-white">Request Invite</button>
+
+        <section class="dd">
+          <button class="dd-btn lg:hidden"><img src="./images/icon-hamburger.svg" alt=""></button>
+          <div class="dd-content lg:hidden block duration-1000" id="">
+            <a href="" class="block">Home</a>
+            <a href="" class="block">About</a>
+            <a href="" class="block">Contact</a>
+            <a href="" class="block">Blog</a>
+            <a href="">Careers</a>
+          </div>
+        </section>
+      </div>
+    </nav>
+  </header>
+
+  <section class="lg:flex lg:flex-row-reverse overflow-hidden lg:-mb-36">
+    <section class="">
+      <img src="./images/bg-intro-desktop.svg" alt="" class="lg:block hidden lg:w-full relative lg:-mt-36 lg:ml-44">
+      <img src="./images/bg-intro-mobile.svg" alt="" class="lg:hidden block ml-10 ">
+      <img src="./images/image-mockups.png" alt="" class="lg:w-[32pc] relative z-30 lg:-mt-[33pc] -mt-[37pc] lg:ml-72">
+    </section>
+
+    <div class="lg:text-start text-center lg:mt-40 lg:ml-20">
+      <p class="lg:text-5xl text-5xl text-gray-800 lg:mt-0 mt-10 ">Next generation digital banking</p>
+      <p class="text-gray-500 lg:mt-4 lg:w-full mt-5 lg:p-0">Take your financial life online. Your Digitalbank <br>
+        account will be a one stop for spending, <br class="lg:hidden block"> saving, budgeting, investing, and much
+        more</p>
+      <button
+        class="rounded-full bg-green-400 lg:hover:bg-blue-950 hover:text-cyan-700 focus:bg-blue-950  lg:duration-700 px-4 py-2 lg:mt-8 mt-6  text-white">Request
+        Invite</button>
+    </div>
+  </section>
+
+  <section class="bg-slate-100">
+
+    <section class="mt-10 lg:ml-[13pc] lg:pt-14 pt-10 ">
+      <p class="lg:text-4xl text-4xl text-gray-800 lg:text-start text-center lg:mt-0 mt-10 lg:">Why choose <br
+          class="lg:hidden block"> Digitalbank?</p>
+      <p class="lg:text-start text-gray-500 text-center lg:p-0 p-10 lg:mt-5 -mt-5 ">We leverage Open Banking to turn
+        your bank account into your financial hub. <br class="lg:block hidden"> Control your finances like never before.
+      </p>
+    </section>
+
+
+    <section class="py-12 bg-gray-100 lg:ml-9 lg:text-start text-center">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+
+        <div class="lg:flex lg:flex-col lg:h-full">
+          <img src="./images/icon-online.svg" alt="Online Banking" class="mb-4 w-12 h-12 lg:ml-0 ml-40">
+          <p class="text-lg font-semibold mb-3">Online Banking</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Our modern web and mobile applications allow you to keep track of your finances wherever you are in the
+            world.
+          </p>
+        </div>
+
+
+        <div class="lg:flex lg:flex-col lg:h-full">
+          <img src="./images/icon-budgeting.svg" alt="Simple Budgeting" class="mb-4 w-12 h-12 lg:ml-0 ml-40">
+          <p class="text-lg font-semibold mb-3">Simple Budgeting</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            See exactly where your money goes each month. Receive notifications when you’re close to hitting your
+            limits.
+          </p>
+        </div>
+
+
+        <div class="lg:flex lg:flex-col lg:h-full">
+          <img src="./images/icon-onboarding.svg" alt="Fast Onboarding" class="mb-4 w-12 h-12 lg:ml-0 ml-40">
+          <p class="text-lg font-semibold mb-3">Fast Onboarding</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We don’t do branches. Open your account in minutes online and start taking control of your finances right
+            away.
+          </p>
+        </div>
+
+
+        <div class="lg:flex lg:flex-col lg:h-full">
+          <img src="./images/icon-api.svg" alt="Open API" class="mb-4 w-12 h-12 lg:ml-0 ml-40">
+          <p class="text-lg font-semibold mb-3">Open API</p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Manage your savings, investments, pension, and much more from one account. Tracking your money has never
+            been easier.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:ml-9">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-8">Latest Articles</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+          <div class="bg-white overflow-hidden shadow flex flex-col h-full">
+            <img src="./images/image-currency.jpg" alt="Article 1" class="w-full h-40 object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <p class="text-lg font-semibold mb-2">Receive money in any currency with no fees</p>
+              <p class="text-gray-600 text-sm flex-grow">The world is getting smaller and we’re becoming more mobile.
+                So why should you be forced to only receive...</p>
+            </div>
+          </div>
+
+          <div class="bg-white overflow-hidden shadow flex flex-col h-full">
+            <img src="./images/image-restaurant.jpg" alt="Article 2" class="w-full h-40 object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <h3 class="text-lg font-semibold mb-2">Treat yourself without worrying about money</h3>
+              <p class="text-gray-600 text-sm flex-grow">Our simple budgeting feature allows you to separate your
+                spending and set realistic limits each month...</p>
+            </div>
+          </div>
+
+          <div class="bg-white overflow-hidden shadow flex flex-col h-full">
+            <img src="./images/image-plane.jpg" alt="Article 3" class="w-full h-40 object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <h3 class="text-lg font-semibold mb-2">Take your debit card anywhere you go</h3>
+              <p class="text-gray-600 text-sm flex-grow">We don’t want you to be tied to one place. That’s why we make
+                sure your debit card works wherever you are...</p>
+            </div>
+          </div>
+
+          <div class="bg-white overflow-hidden shadow flex flex-col h-full">
+            <img src="./images/image-confetti.jpg" alt="Article 4" class="w-full h-40 object-cover">
+            <div class="p-4 flex flex-col flex-grow">
+              <h3 class="text-lg font-semibold mb-2">Our invite-only Beta accounts are now live!</h3>
+              <p class="text-gray-600 text-sm flex-grow">After months of hard work, we’re excited to launch our closed
+                beta. It’s easy to request an invite through the site...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer
+    class="bg-indigo-950 lg:flex lg:justify-between lg:px-16 lg:py-10 lg:text-start text-center items-center px-10 py-10">
+    <div>
+      <img src="../images/logo-light.svg" alt="" class="lg:ml-0 ml-20">
+      <logos class="flex gap-4 lg:mt-20 lg:ml-0 ml-20 mt-7">
+        <img src="../images/icon-facebook.svg" alt="">
+        <img src="../images/icon-youtube.svg" alt="">
+        <img src="../images/icon-twitter.svg" alt="">
+        <img src="../images/icon-pinterest.svg" alt="">
+        <img src="../images/icon-instagram.svg" alt="">
+      </logos>
+    </div>
+
+    <ul class="text-white leading-10 lg:mt-0 mt-5">
+      <li class="lg:hover:text-green-500"><a href="">About Us</a></li>
+      <li class="lg:hover:text-green-500"><a href="">Contact</a></li>
+      <li class="lg:hover:text-green-500"><a href="">Blog</a></li>
+    </ul>
+    <ul class="text-white leading-10 ">
+      <li class="lg:hover:text-green-500"><a href="">Careers</a></li>
+      <li class="lg:hover:text-green-500"><a href="">Support</a></li>
+      <li class="lg:hover:text-green-500"><a href="">Privacy Policy</a></li>
+    </ul>
+
+
+    <div class="lg:mt-5 mt-5">
+      <button class="rounded-full bg-green-400  lg:px-4 lg:py-2  text-white lg:ml-28 lg:mt0">Request Invite</button>
+      <p class="text-gray-600 lg:mt-3 mt-5"> © Digitalbank. All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>
